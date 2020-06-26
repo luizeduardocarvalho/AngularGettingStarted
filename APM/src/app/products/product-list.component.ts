@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
 
+
 @Component({
     selector: 'pm-products',
     templateUrl: './product-list.component.html'
 })
 export class ProductListComponent {
     pageTitle: string = 'Product List';
+    imageWidth: number = 50;
+    imageMargin: number = 2;
+    showImage: boolean = false;
+    listFilter: string = 'cart';
     products: any[] = [
         {
             "productId": 2,
@@ -15,7 +20,7 @@ export class ProductListComponent {
             "description": "15 gallon capacity rolling garden cart",
             "price": 32.99,
             "starRating": 4.2,
-            "imgageUrl": "assets/images/garden_cart.png"
+            "imageUrl": "assets/images/garden_cart.png"
         },
         {
             "productId": 6,
@@ -25,7 +30,11 @@ export class ProductListComponent {
             "description": "Curved claw steel hammer",
             "price": 8.9,
             "starRating": 4.8,
-            "imgageUrl": "assets/images/hammer.png"
+            "imageUrl": "assets/images/hammer.png"
         }
     ];
+
+    toggleImage(): void {
+        this.showImage = !this.showImage;
+    }
 }
