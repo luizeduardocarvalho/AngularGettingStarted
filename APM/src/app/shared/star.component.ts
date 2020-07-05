@@ -5,7 +5,7 @@ import { Component, OnChanges, SimpleChanges, Input, Output, EventEmitter } from
     templateUrl: './star.component.html',
     styleUrls: ['./star.component.css']
 })
-export class StartComponent implements OnChanges {    
+export class StarComponent implements OnChanges {    
     @Input() rating: number;
     starWidth: number;
     @Output() ratingClick: EventEmitter<string> =
